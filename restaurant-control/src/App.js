@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import ProtectedRoute from './components/utils/protectedRoute';
 import Layout from './components/pages/layout';
 import Home from './components/pages/home';
@@ -10,7 +10,7 @@ import IngredientsPage from './components/pages/ingredients';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<ProtectedRoute />}>
@@ -24,7 +24,7 @@ function App() {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
