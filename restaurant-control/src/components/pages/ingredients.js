@@ -26,7 +26,7 @@ function IngredientsPage() {
 
     const updateIngredients = () => {
         // Make the API request to get the recipes
-        axios.get('http://127.0.0.1:8000/ingredients/', config)
+        axios.get('https://django-recipe-manager.herokuapp.com/ingredients/', config)
             .then(response => {
                 // Set the recipes in state
                 setIngredients(response.data);
@@ -55,7 +55,7 @@ function IngredientsPage() {
 
     const deleteIngredient = (id) => {
 
-        axios.delete(`http://localhost:8000/ingredients/delete/${id}/`, config)
+        axios.delete(`https://django-recipe-manager.herokuapp.com/ingredients/delete/${id}/`, config)
             .then(response => {
                 updateIngredients();
             })

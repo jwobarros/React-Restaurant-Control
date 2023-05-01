@@ -27,7 +27,7 @@ function RecipePage() {
 
     const updateRecipes = () => {
         // Make the API request to get the recipes
-        axios.get('http://127.0.0.1:8000/recipes/', config)
+        axios.get('https://django-recipe-manager.herokuapp.com/recipes/', config)
             .then(response => {
                 // Set the recipes in state
                 setRecipes(response.data);
@@ -55,7 +55,7 @@ function RecipePage() {
     const getRecipeIngredients = (recipe_id) => {
 
         // Make the API request to get the recipes
-        axios.get(`http://127.0.0.1:8000/recipes/${recipe_id}/ingredients/`, config)
+        axios.get(`https://django-recipe-manager.herokuapp.com/recipes/${recipe_id}/ingredients/`, config)
             .then(response => {
                 // Set the ingredients in state
                 setIngredients(response.data);
@@ -88,7 +88,7 @@ function RecipePage() {
 
     const deleteRecipeIngredient = (id) => {
 
-        axios.delete(`http://localhost:8000/recipes/${filteredRecipes[0].id}/ingredients/delete/${id}/`, config)
+        axios.delete(`https://django-recipe-manager.herokuapp.com/recipes/${filteredRecipes[0].id}/ingredients/delete/${id}/`, config)
             .then(response => {
                 getRecipeIngredients(filteredRecipes[0].id)
             })

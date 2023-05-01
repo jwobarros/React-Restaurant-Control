@@ -20,7 +20,7 @@ const LoginPage = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8000/token/', {
+            const response = await axios.post('https://django-recipe-manager.herokuapp.com/token/', {
                 username: username,
                 password: password
             })

@@ -30,7 +30,7 @@ export default function AddIngredientPriceModal({ show, setShow, selectedIngredi
 
     const deletePrice = (id) => {
 
-        axios.delete(`http://127.0.0.1:8000/ingredients/${selectedIngredient.id}/prices/delete/${id}/`, config)
+        axios.delete(`https://django-recipe-manager.herokuapp.com/ingredients/${selectedIngredient.id}/prices/delete/${id}/`, config)
             .then(response => {
                 getPrices()
             })
@@ -44,7 +44,7 @@ export default function AddIngredientPriceModal({ show, setShow, selectedIngredi
         event.preventDefault();
 
         if (Object.keys(selectedPrice).length !== 0) {
-            axios.put(`http://127.0.0.1:8000/ingredients/${selectedIngredient.id}/prices/${selectedPrice.id}/`, {
+            axios.put(`https://django-recipe-manager.herokuapp.com/ingredients/${selectedIngredient.id}/prices/${selectedPrice.id}/`, {
                 price, measurement
             }, config)
                 .then(response => {
@@ -59,7 +59,7 @@ export default function AddIngredientPriceModal({ show, setShow, selectedIngredi
                 });
         } 
         else {
-            axios.post(`http://127.0.0.1:8000/ingredients/${selectedIngredient.id}/prices/`, {
+            axios.post(`https://django-recipe-manager.herokuapp.com/ingredients/${selectedIngredient.id}/prices/`, {
                 price, measurement
             }, config)
                 .then(response => {
@@ -95,7 +95,7 @@ export default function AddIngredientPriceModal({ show, setShow, selectedIngredi
 
 
     const getPrices = () => {
-        axios.get(`http://127.0.0.1:8000/ingredients/${selectedIngredient.id}/prices/`, config)
+        axios.get(`https://django-recipe-manager.herokuapp.com/ingredients/${selectedIngredient.id}/prices/`, config)
             .then(response => {
                 setPrices(response.data)
             })

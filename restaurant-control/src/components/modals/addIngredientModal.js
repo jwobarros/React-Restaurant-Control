@@ -37,7 +37,7 @@ export default function AddIngredientModal({ show, setShow, updateIngredients, s
         event.preventDefault();
 
         if (Object.keys(selectedIngredient).length !== 0) {
-            axios.put(`http://127.0.0.1:8000/ingredients/${selectedIngredient.id}/`, {
+            axios.put(`https://django-recipe-manager.herokuapp.com/ingredients/${selectedIngredient.id}/`, {
                 name, description, article_number, measurement 
             }, config)
                 .then(response => {
@@ -52,7 +52,7 @@ export default function AddIngredientModal({ show, setShow, updateIngredients, s
                     setError(error.response.request.responseText)
                 });
              } else {
-            axios.post('http://127.0.0.1:8000/ingredients/', {
+            axios.post('https://django-recipe-manager.herokuapp.com/ingredients/', {
                 name, description, article_number, measurement 
             }, config)
                 .then(response => {

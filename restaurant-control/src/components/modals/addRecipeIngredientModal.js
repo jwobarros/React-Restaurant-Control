@@ -32,7 +32,7 @@ export default function AddIngredientModal({ show, setShow, recipes, updateIngre
     const handleFormSubmit = (event) => {
         event.preventDefault();
 
-        axios.post(`http://127.0.0.1:8000/recipes/${recipes[0].id}/ingredients/`, {
+        axios.post(`https://django-recipe-manager.herokuapp.com/recipes/${recipes[0].id}/ingredients/`, {
             quantity, measurement, ingredient
         }, config)
             .then(response => {
@@ -55,7 +55,7 @@ export default function AddIngredientModal({ show, setShow, recipes, updateIngre
 
     const getIngredientList = () => {
 
-        axios.get('http://127.0.0.1:8000/ingredients/', config)
+        axios.get('https://django-recipe-manager.herokuapp.com/ingredients/', config)
             .then(response => {
                setIngredientList(response.data)
             })

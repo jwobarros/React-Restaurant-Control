@@ -25,7 +25,7 @@ export default function NewRecipeModal({ show, setShow, updateRecipes }) {
     const handleFormSubmit = (event) => {
         event.preventDefault();
         
-        axios.post('http://127.0.0.1:8000/recipes/', {
+        axios.post('https://django-recipe-manager.herokuapp.com/recipes/', {
             name, description
         }, config)
             .then(response => {
