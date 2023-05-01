@@ -47,6 +47,7 @@ export default function AddIngredientModal({ show, setShow, updateIngredients, s
                     setMeasurement("")
                     setArticleNumber("")
                     updateIngredients()
+                    setError("")
                 })
                 .catch(error => {
                     setError(error.response.request.responseText)
@@ -62,6 +63,8 @@ export default function AddIngredientModal({ show, setShow, updateIngredients, s
                     setMeasurement("")
                     setArticleNumber("")
                     updateIngredients()
+                    setError("")
+
                 })
                 .catch(error => {
                     setError(error.response.request.responseText)

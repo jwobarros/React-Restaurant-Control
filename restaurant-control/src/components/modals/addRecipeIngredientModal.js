@@ -41,6 +41,8 @@ export default function AddIngredientModal({ show, setShow, recipes, updateIngre
                 setQuantity("")
                 setMeasurement("")
                 setIngredient("")
+                setError("")
+
             })
             .catch(error => {
                 setError(error.response.request.responseText)

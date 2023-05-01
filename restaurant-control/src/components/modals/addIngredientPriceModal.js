@@ -52,6 +52,7 @@ export default function AddIngredientPriceModal({ show, setShow, selectedIngredi
                     setPrice("")
                     getPrices();
                     setSelectedPrice({})
+                    setError("")
 
                 })
                 .catch(error => {
@@ -67,6 +68,8 @@ export default function AddIngredientPriceModal({ show, setShow, selectedIngredi
                     setMeasurement("")
                     setSelectedPrice({})
                     setPrice("")
+                    setError("")
+
                 })
                 .catch(error => {
                     setError(error.response.request.responseText)

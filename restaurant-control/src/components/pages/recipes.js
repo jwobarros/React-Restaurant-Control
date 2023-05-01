@@ -179,7 +179,7 @@ function RecipePage() {
                                                         <td></td>
                                                         <td></td>
                                                         <td>Total:  </td>
-                                                        <td>$ {ingredients.reduce((acc, item) => acc + item.cost, 0)}</td>
+                                                        <td>$ {ingredients.reduce((acc, item) => acc + item.cost, 0).toFixed(2)}</td>
                                                         <td></td>
                                                     </tr>
                                                 </tbody>
