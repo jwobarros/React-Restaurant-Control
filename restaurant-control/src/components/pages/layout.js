@@ -18,10 +18,10 @@ const Layout = () => {
                         <h4 className="text-center mt-5 text-blue">My Recipes</h4>
                         <hr className="mt-5" />
                         <Nav.Item>
-                            <Nav.Link className="navigation-link mt-3" href="recipes">Recipes</Nav.Link>
+                            <Nav.Link className="navigation-link mt-3" href="#/recipes">Recipes</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link className="navigation-link mt-3" href="ingredients">Ingredients</Nav.Link>
+                            <Nav.Link className="navigation-link mt-3" href="#/ingredients">Ingredients</Nav.Link>
                         </Nav.Item>
                         <Nav.Item className="mt-auto mb-2 mx-auto">
                             <Button variant="light" style={{ opacity: 0.75 }} onClick={handleLogout}>Logout</Button>
