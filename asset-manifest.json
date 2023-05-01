@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/recipe-control/static/css/main.38a1d0bb.css",
-    "main.js": "/recipe-control/static/js/main.5771a7ed.js",
-    "static/js/787.35bf8529.chunk.js": "/recipe-control/static/js/787.35bf8529.chunk.js",
-    "index.html": "/recipe-control/index.html",
-    "main.38a1d0bb.css.map": "/recipe-control/static/css/main.38a1d0bb.css.map",
-    "main.5771a7ed.js.map": "/recipe-control/static/js/main.5771a7ed.js.map",
-    "787.35bf8529.chunk.js.map": "/recipe-control/static/js/787.35bf8529.chunk.js.map"
+    "main.css": "/React-Restaurant-Control/static/css/main.38a1d0bb.css",
+    "main.js": "/React-Restaurant-Control/static/js/main.11455eaa.js",
+    "static/js/787.35bf8529.chunk.js": "/React-Restaurant-Control/static/js/787.35bf8529.chunk.js",
+    "index.html": "/React-Restaurant-Control/index.html",
+    "main.38a1d0bb.css.map": "/React-Restaurant-Control/static/css/main.38a1d0bb.css.map",
+    "main.11455eaa.js.map": "/React-Restaurant-Control/static/js/main.11455eaa.js.map",
+    "787.35bf8529.chunk.js.map": "/React-Restaurant-Control/static/js/787.35bf8529.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.38a1d0bb.css",
-    "static/js/main.5771a7ed.js"
+    "static/js/main.11455eaa.js"
   ]
 }
