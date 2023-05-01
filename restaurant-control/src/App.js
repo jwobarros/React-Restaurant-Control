@@ -2,7 +2,6 @@ import React from 'react';
 import { HashRouter, Routes, Route } from "react-router-dom";
 import ProtectedRoute from './components/utils/protectedRoute';
 import Layout from './components/pages/layout';
-import Home from './components/pages/home';
 import LoginPage from './components/pages/login';
 import Recipes from './components/pages/recipes';
 import NoPage from './components/pages/404';
@@ -14,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<ProtectedRoute />}>
-            <Route index path="home" element={<Home />} />
+            <Route index element={<Recipes />} />
             <Route path="recipes" element={<Recipes />} />
             <Route path="ingredients" element={<IngredientsPage />} />
           </Route>
